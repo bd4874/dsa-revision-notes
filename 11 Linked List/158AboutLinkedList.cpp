@@ -44,12 +44,15 @@ p->next;
 Suppose a node is defined in heap memory
 with data value as 8 and address of the
 next node as 210.
-p* is a pointer which is pointing to the
+*p is a pointer which is pointing to the
 first node of the LL.
 -----------------------------------------
-q=p       | now q will point to first   
-          | node also.                  
-q=p->next | q will point to the next node                       
-p=p->next | p will point to the next node                           
-----------------------------------------
+q=p       | now q will point to first
+          | node also.
+q=p->next | q will point to the next node
+p=p->next | p will point to the next node
+-----------------------------------------
+
+If pointer *p is not pointing on any node
+then we assign p = 0 or p = NULL;
 */  
