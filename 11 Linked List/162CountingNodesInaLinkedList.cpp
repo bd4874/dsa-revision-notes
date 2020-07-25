@@ -1,4 +1,4 @@
-// Recursive Display Linked List
+// Counting Nodes In A Linked List
 // Author: REET
 
 #include <iostream>
@@ -38,6 +38,7 @@ void Display(struct Node *p)
     }
 }
 
+
 void RDisplay(struct Node *p)
 {
     if (p != NULL)
@@ -45,6 +46,15 @@ void RDisplay(struct Node *p)
         cout << p->data << endl;
         RDisplay(p->next);
     }
+}
+
+void count(struct Node *p) {
+    int count = 0;
+    while(p != NULL) {
+        count++;
+        p = p->next;
+    }
+    cout << "Node Count: " << count << endl;
 }
 
 int main()
@@ -57,6 +67,8 @@ int main()
 
     cout << "Using Recursive Method" << endl;
     RDisplay(first);
+
+    count(first);
     return 0;
 }
 
@@ -76,4 +88,5 @@ Using Recursive Method
 7
 10
 15
+Node Count: 5
 */
