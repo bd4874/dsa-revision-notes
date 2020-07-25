@@ -1,5 +1,11 @@
-// Maximum element in Linked List
+// Searching element in Linked List
 // Author: REET
+
+/*
+For searching elements in a linked list,
+we use Linear Search, not the binary
+search.
+*/
 
 #include <iostream>
 using namespace std;
@@ -40,16 +46,16 @@ void display(struct Node *p)
     cout << endl;
 }
 
-int max(struct Node *p)
+int search(struct Node *p, int n)
 {
-    int n = -322323;
+    int count = 1;
     while (p != NULL)
     {
-        if (p->data > n)
-            n = p->data;
-            p = p->next;
+        if (p->data == n)
+            return count;
+        count++;
+        p = p->next;
     }
-    return n;
 }
 
 int main()
@@ -57,8 +63,8 @@ int main()
     int A[] = {3, 5, 17, 10, 15};
     create(A, 5);
     display(first);
-    int max1 = max(first);
-    cout << "Max No.: " << max1 << endl;
+    int index = search(first, 17);
+    cout << "Element is present at Position: " << index << endl;
     return 0;
 }
 
@@ -67,5 +73,5 @@ WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
 Node Elements are: 3 5 17 10 15 
-Max No.: 17
+Element is present at Position: 3
 */
