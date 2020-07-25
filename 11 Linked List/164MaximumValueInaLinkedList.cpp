@@ -1,4 +1,4 @@
-// Counting Nodes In A Linked List
+// Maximum element in Linked List
 // Author: REET
 
 #include <iostream>
@@ -29,27 +29,40 @@ void create(int A[], int n)
     }
 }
 
-void count(struct Node *p) {
-    int count = 0;
-    while(p != NULL) {
-        count++;
+void display(struct Node *p)
+{
+    cout << "Node Elements are: ";
+    while (p != NULL)
+    {
+        cout << p->data << " ";
         p = p->next;
     }
-    cout << "Node Count(Iterative Approach): " << count << endl;
+    cout << endl;
 }
 
-int Rcount(struct Node *p) {
-    if(p == NULL) 
-    return 0;
-    return Rcount(p->next) + 1;
+int max(struct Node *p)
+{
+    int n = -322323;
+    while (p != NULL)
+    {
+        if (p->data > n)
+        {
+            n = p->data;
+            p = p->next;
+        }
+        else
+            p = p->next;
+    }
+    return n;
 }
 
 int main()
 {
     int A[] = {3, 5, 7, 10, 15};
     create(A, 5);
-    count(first);
-    cout << "Node Count(Recursive Approach): " << Rcount(first) << endl;
+    display(first);
+    int max1 = max(first);
+    cout << "Max No.: " << max1 << endl;
     return 0;
 }
 
@@ -57,6 +70,6 @@ int main()
 WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
-Node Count(Iterative Approach): 5
-Node Count(Recursive Approach): 5
+Node Elements are: 3 5 7 10 15 
+Sum of elements of the Node: 40
 */
