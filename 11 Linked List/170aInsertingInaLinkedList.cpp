@@ -38,7 +38,7 @@ void create(int A[], int n)
 
 void display(struct Node *p)
 {
-    cout << "Node Elements are: ";
+    cout << "New Node Elements are: ";
     while (p != NULL)
     {
         cout << p->data << " ";
@@ -47,7 +47,7 @@ void display(struct Node *p)
     cout << endl;
 }
 
-struct Node *insert(struct Node *first, int data)
+struct Node *insert(int data)
 {
 
     struct Node *n = new Node;
@@ -62,7 +62,7 @@ int main()
     int A[] = {3, 5, 17, 10, 15};
     create(A, 5);
     display(first);
-    display(insert(first, 28));
+    display(insert(28));
     return 0;
 }
 
@@ -71,5 +71,5 @@ WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
 Node Elements are: 3 5 17 10 15 
-Node Elements are: 28 3 5 17 10 15 
+New Node Elements are: 28 3 5 17 10 15 
 */
