@@ -1,4 +1,4 @@
-// Removing duplicates from Linked List.
+// Improving Searching element in LL
 // Author: REET
 
 #include <iostream>
@@ -40,14 +40,20 @@ void display(struct Node *p)
     cout << endl;
 }
 
-void delDuplicates()
+void InsertLast(int data)
 {
-    struct Node *p = NULL;
-    p = first;
-    while (p != NULL)
+    struct Node *t = new Node;
+    struct Node *last = first;
+    t->data = data;
+    t->next = NULL;
+    if (first == NULL)
     {
-        if (p->data)
-            p = p->next;
+        first = last = t;
+    }
+    else
+    {
+        last->next = t;
+        last = t;
     }
 }
 
@@ -56,6 +62,16 @@ int main()
     int A[] = {3, 5, 17, 10, 15};
     create(A, 5);
     display(first);
-    delDuplicates();
+    InsertLast(56);
+    display(first);
     return 0;
 }
+
+/*
+WARNING: Output may vary according to
+architecture type or input.
+Output of the program : 
+Node Elements are: 3 5 17 10 15 
+Element is at Position: 3
+Node Elements are: 17 3 5 10 15 
+*/
