@@ -38,7 +38,7 @@ void create(int A[], int n)
 
 void display(struct Node *p)
 {
-    cout << "New Node Elements are: ";
+    cout << "Node Elements are: ";
     while (p != NULL)
     {
         cout << p->data << " ";
@@ -75,5 +75,5 @@ WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
 Node Elements are: 3 5 17 10 15 
-New Node Elements are: 3 5 17 10 28 15
+Node Elements are: 3 5 17 10 28 15
 */

@@ -1,12 +1,5 @@
-// Deleting node after given position.
+// Removing duplicates from Linked List.
 // Author: REET
-
-/*
-There are two places where we can insert
-the element.
-    1.Deleting first node.
-    2.Deleting node after given position.
-*/
 
 #include <iostream>
 using namespace std;
@@ -38,7 +31,7 @@ void create(int A[], int n)
 
 void display(struct Node *p)
 {
-    cout << "Node Elements are: ";
+    cout << "New Node Elements are: ";
     while (p != NULL)
     {
         cout << p->data << " ";
@@ -47,34 +40,10 @@ void display(struct Node *p)
     cout << endl;
 }
 
-void deleteNode(int position)
-{
-    struct Node *p;
-    struct Node *q = NULL;
-    p = first;
-    for (int i = 0; i < position; i++)
-    {
-        q = p;
-        p = p->next;
-    }
-    q->next = p->next;
-    delete p;
-}
-
 int main()
 {
     int A[] = {3, 5, 17, 10, 15};
     create(A, 5);
     display(first);
-    deleteNode(1);
-    display(first);
     return 0;
 }
-
-/*
-WARNING: Output may vary according to
-architecture type or input.
-Output of the program : 
-Node Elements are: 3 5 17 10 15 
-Node Elements are: 3 17 10 15 
-*/

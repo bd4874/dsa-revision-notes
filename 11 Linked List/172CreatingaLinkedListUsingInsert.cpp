@@ -12,7 +12,7 @@ struct Node
 
 void display(struct Node *p)
 {
-    cout << "New Node Elements are: ";
+    cout << "Node Elements are: ";
     while (p != NULL)
     {
         cout << p->data << " ";
@@ -63,6 +63,6 @@ int main()
 WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
-New Node Elements are: 3 5 17 10 15 
-New Node Elements are: 3 5 17 10 28 15 
+Node Elements are: 3 5 17 10 15 
+Node Elements are: 3 5 17 10 28 15 
 */
