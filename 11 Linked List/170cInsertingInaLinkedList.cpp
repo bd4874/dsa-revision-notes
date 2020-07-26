@@ -62,7 +62,7 @@ struct Node *insert(int data, int position)
         struct Node *p = first;
         struct Node *n = new Node;
         n->data = data;
-        for (int i = 0; i < (position - 1); i++)
+        for (int i = 0; i < (position - 1) && p; i++)
         {
             p = p->next;
         }
