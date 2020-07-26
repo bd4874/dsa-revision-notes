@@ -40,14 +40,28 @@ void display(struct Node *p)
     cout << endl;
 }
 
-struct Node *insert(struct Node *first, int data)
+void search(struct Node *p, int n)
 {
-
-    struct Node *n = new Node;
-    n->data = data;
-    n->next = first;
-    first = n;
-    return first;
+    int count = 0;
+    struct Node *q = NULL;
+    while (p != 0)
+    {
+        if (p->data == n)
+        {
+            q->next = p->next;
+            p->next = first;
+            first = p;
+            count++;
+            cout << "Element is at Position: " << count << endl;
+            break;
+        }
+        else
+        {
+            q = p;
+            p = p->next;
+            count++;
+        }
+    }
 }
 
 int main()
@@ -55,7 +69,8 @@ int main()
     int A[] = {3, 5, 17, 10, 15};
     create(A, 5);
     display(first);
-    display(insert(first, 28));
+    search(first, 17);
+    display(first);
     return 0;
 }
 
@@ -64,5 +79,6 @@ WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
 Node Elements are: 3 5 17 10 15 
-Node Elements are: 28 3 5 17 10 15
+Element is at Position: 3
+Node Elements are: 17 3 5 10 15 
 */

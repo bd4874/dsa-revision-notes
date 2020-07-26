@@ -47,15 +47,22 @@ void display(struct Node *p)
     cout << endl;
 }
 
-// int search(struct Node *p, int n)
+struct Node *insert(struct Node *first, int data)
+{
 
+    struct Node *n = new Node;
+    n->data = data;
+    n->next = first;
+    first = n;
+    return first;
+}
 
 int main()
 {
     int A[] = {3, 5, 17, 10, 15};
     create(A, 5);
     display(first);
-    
+    display(insert(first, 28));
     return 0;
 }
 
@@ -64,6 +71,5 @@ WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
 Node Elements are: 3 5 17 10 15 
-Element is present at Position: 3
-Node Elements are: 17 3 5 10 15 
+Node Elements are: 28 3 5 17 10 15 
 */
