@@ -97,4 +97,14 @@ Enter all elements
 5
 Elements of the Array are: 
 1 2 3 4 5 
+Enter the number you want to add
+6
+Elements of the Array are: 
+1 2 3 4 5 6 
+Enter the Index of the number where you want to enter the element: 
+3
+Enter the number that you want to enter
+0
+Elements of the Array are: 
+1 2 3 0 4 5 6 
 */
