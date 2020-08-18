@@ -36,13 +36,22 @@ void add(struct Array *arr, int n)
 void insert(struct Array *arr, int index, int num)
 {
 
-    for (int i = arr->length - 1; i >= index; i--)
+    for (int i = arr->length; i > index; i--)
     {
-        arr->A[i+1] = arr->A[i];
+        arr->A[i] = arr->A[i - 1];
     }
     arr->A[index] = num;
     arr->length++;
 }
+
+void deleteElement(struct Array *arr, int index)
+{
+    for (index; index < arr->length - 1; index++)
+    {
+        arr->A[index] = arr->A[index + 1];
+    }
+    arr->length--;
+};
 
 int main()
 {
@@ -51,6 +60,7 @@ int main()
     int i, n;
     int append_num;
     int insert_num, index;
+    int del_index;
 
     cout << "Enter the size of the array\n";
     cin >> arr.size;
@@ -77,6 +87,10 @@ int main()
     cout << "Enter the number that you want to enter" << endl;
     cin >> insert_num;
     insert(&arr, index, insert_num);
+    display(arr);
+    cout << "Enter the index of the element you want to delete:" << endl;
+    cin >> del_index;
+    deleteElement(&arr, del_index);
     display(arr);
     return 0;
 }
