@@ -39,4 +39,8 @@ Search Algorithm.
         10     20    40     60
    Inorder Traversal:10 15 20 30 40 50 60
 3. No. of BST for n nodes = 2nCn/(n+1)
+
+In one shape the key element can only be
+filled in one way otherwise inorder
+traversal won't have same result.
 */
