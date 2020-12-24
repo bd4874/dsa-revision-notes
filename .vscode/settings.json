@@ -8,5 +8,9 @@
         "plaintext",
         "code",
         "cpp"
-    ]
+    ],
+    "files.associations": {
+        "iostream": "cpp",
+        "regex": "cpp"
+    }
 }
