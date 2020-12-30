@@ -27,7 +27,7 @@ path from that node to root node.
 =================DEGREE=================
 Degree of a node is number of children
 it has.
-Degree of a tree is predecided. Degree
+Degree of a tree is pre decided. Degree
 can be minimum three.
 
 =============EXTERNAL NODES=============
@@ -39,13 +39,13 @@ Internal nodes/non leaf nodes/non terminal
 are nodes with degree more than 0.
 
 =================LEVEL==================
-Level start from 0.
+Level start from 1.
 Root is at level 0 and incremented 
 afterwards.
 We count it by taking number of nodes.
 
 =================HEIGHT=================
-Height start from 1.
+Height start from 0.
 Root is at height 1 and incremented 
 afterwards.
 We count it by taking number of edges.

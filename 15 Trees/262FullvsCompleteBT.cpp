@@ -8,7 +8,7 @@ n = (2^(h+1))-1
 
 ==========COMPLETE BINARY TREE==========
 A complete binary tree of height(h) will
-be a full binary tree upto (h-1) height
+be a full binary tree up to (h-1) height
 and in the last level the element will be
 filled from left to right without
 skipping any element and there should not

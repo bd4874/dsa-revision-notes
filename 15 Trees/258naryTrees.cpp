@@ -8,7 +8,7 @@ the degree of the tree.
 For 3-ary {0,1,2,3}
 Q)Who will decide the degree of tree?
 Ans: By looking we can't judge that.
-Degree is predecided. A binary tree can
+Degree is pre decided. A binary tree can
 also be a 3-ary tree if you are assuming
 that.
 

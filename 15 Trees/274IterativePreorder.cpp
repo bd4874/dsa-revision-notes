@@ -8,10 +8,11 @@ not always necessary.
 =======PREORDER ITERATIVE APPROACH=======
 Create a stack.
 Print root data.
-Push the addess of root node in the stack
+Push the address of root node in the 
+stack.
 Move the pointer to the left child.
 Print the data.
-Push the addess of the node in the stack.
+Push the address of the node in the stack.
 Move the pointer to the left child.
 Print the data.
 Now pointer became NULL. But the stack is

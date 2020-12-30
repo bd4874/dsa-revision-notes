@@ -1,7 +1,7 @@
 // Author: REET
 
 /*
-=======DEFINITION OF BIINARY TREE=======
+=======DEFINITION OF BINARY TREE=======
 Trees having maximum number of nodes as 2
 are known as binary trees.
 It can have 0,1,2 children only. Not more 
@@ -9,7 +9,7 @@ than 2.
 
 ====NO. OF TRESS FOR UNLABELLED NODES====
 *Catalan Number
-T(n) = 2nCn/n+1
+T(n) = ((2nCn)/(n+1))
 e.g. T(3)=5, T(5)=42...
 *Recursive formula
 T(n) = Summ(i=1 to n)T(i-1) * T(n-i)
