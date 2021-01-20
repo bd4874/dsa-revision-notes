@@ -3,8 +3,9 @@
 /*
 In a Binary Search Tree(BST) all the
 elements in the left subtree is smaller 
-than the node and all the elements in the
-right subtree are greater than the node.
+than the parent node and all the 
+elements in the right subtree are 
+greater.
 
 This is useful while searching a
 particular element in the tree.
@@ -16,31 +17,33 @@ How is it useful while searching?
           30
     15          50
 10     20    40     60
-Suppose I'm searching for 40 check root
-node. Is that 40? If yes, element found.
-No it's lesser that 40(Let's suppose 30).
-Then obviously the element 40 is in the
-right subtree.
-Now check the root node of the right side
-subtree.Is that 40? If yes, element found
-else if it it greater than 40 then 40
-must be present on the left side else on
-the right side if the root element is
-smaller than 40.
+Suppose I'm searching for 40.
+
+Steps Involved:
+Check root node. Is that 40? No!
+Visit the right note of root as
+the key element 40 is greater than 30.
+Is that 40? No!
+Then check the right child, because 50
+is less than 40.
+Voila! Element is found.
 This operation is similar to Binary 
 Search Algorithm.
 
-============PROPERTIES OF BST============
+===========PROPERTIES OF BST===========
 1. No duplicates allowed.
-2. If you take Inorder Traversal, you'll
-   get the element in sorted order.
+2. If you take Inorder Traversal,you'll
+   get the elements in sorted order.
    e.g.           30
-            15          50
-        10     20    40     60
-   Inorder Traversal:10 15 20 30 40 50 60
-3. No. of BST for n nodes = 2nCn/(n+1)
+           15          50
+       10     20    40     60
+   Inorder: 10 15 20 30 40 50 60
 
-In one shape the key element can only be
-filled in one way otherwise inorder
+3. Different shape tree that can be 
+   generated having same inorder = 
+   2nCn/(n+1)
+
+In one shape the key element can only 
+be filled in one way otherwise inorder
 traversal won't have same result.
 */
