@@ -12,15 +12,6 @@ In a similar fashion, we need to create
 array of linked list.
 For this purpose, we need to write,
 list<int> *l = new list<int> [v];
-
-Below program is for the graph
-    0------1
-    |    / |\
-    |   /  | \
-    |  /   |  2
-    | /    | /
-    |/     |/
-    4------3
 */
 
 #include <iostream>
@@ -55,6 +46,16 @@ public:
 
 int main() {
 
+    /*
+    Below program is for the graph
+    0------1
+    |    / |\
+    |   /  | \
+    |  /   |  2
+    | /    | /
+    |/     |/
+    4------3
+    */
     // Graph has 5 vertices
     Graph g(5);
     g.addEdge(0,4);
