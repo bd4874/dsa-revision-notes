@@ -2,7 +2,7 @@
 // Author: REET
 
 #include <bits/stdc++.h>
-#define SIZE 1e5
+#define SIZE 100
 using namespace std;
 
 /*
@@ -19,9 +19,11 @@ vector<bool> sieve(SIZE, true);
 void generatePrimeSieve() {
     sieve[0] = false;
     sieve[1] = false;
-    for(int i=2; i*i<SIZE; i++) {
-        for(int j=i*i; j<SIZE; j+=i) {
-            sieve[j] = false;
+    for(int i=2; i*i<=SIZE; i++) {
+        if(sieve[i]) {
+            for(int j=i*i; j<=SIZE; j+=i) {
+                sieve[j] = false;
+            }
         }
     }
 }
@@ -40,5 +42,5 @@ WARNING: Output may vary according to
 architecture type or input.
 Output of the program : 
 Prime numbers within 100 are: 
-2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
 */
